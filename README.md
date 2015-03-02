@@ -1,6 +1,6 @@
 # Camembert au lait crew - une gomme
 
-![une gomme](gomme.svg)
+![une gomme](https://raw.githubusercontent.com/ultreme/une-gomme/master/gomme.svg)
 
     une gomme
     une gomme
