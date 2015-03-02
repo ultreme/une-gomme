@@ -1,0 +1,37 @@
+<html charset="UTF-8">
+  <head>
+    <title>Une gomme</title>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  </head>
+  <body>
+   <div id="gogogomme"></div>
+    <script>
+      // config
+      var FPS = 15;
+      var SPEED = 20;
+
+      // gomme grid
+      var gomz = '';
+      for (var x = 0; x < 20; x++) {
+      	       gomz += '<div>';
+      	       for (var y = 0; y < 20; y++) {
+	       	   gomz += '<img src="gomme.svg" alt="gomme" class="une_gomme" />';	      
+               }
+	       gomz += '</div>';
+      }
+      $("#gogogomme").html(gomz);
+
+      var gogogomme = function () {
+		$(".une_gomme").each(function () {
+			var offset = $(this).offset();
+			offset.left += SPEED;
+			if (offset.left > (document.body.offsetWidth - $(this).width())) {
+				offset.left = 0;
+			}
+                        $(this).offset(offset);
+		});
+      };
+      window.setInterval(function() { gogogomme(); }, 1000 / FPS);
+    </script>
+  </body>
+</html>
