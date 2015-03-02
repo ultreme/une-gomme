@@ -1,5 +1,7 @@
 # Camembert au lait crew - une gomme
 
+![une gomme](gomme.svg)
+
     une gomme
     une gomme
     une gomme une gomme une gomme une gogomme
